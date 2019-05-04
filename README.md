@@ -11,9 +11,9 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
-[image2]: ./examples/grayscale.jpg "Grayscale"
-[image3]: ./examples/grayscale.jpg "Grayscale"
+[image1]: ./test_images_output/grayscale.jpg "Grayscale"
+[image2]: ./test_images_output/canny_edged.jpg "Canny Edges"
+[image3]: ./test_images_output/masked_edge.jpg "Masked Edges"
 
 ---
 
@@ -23,11 +23,11 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. 
 First, I converted the images to grayscale and later applied Gaussian smoothing which resulted in:
---![alt text][image1]
+--![grayscale_image][image1]
 Then, I applied the `canny` function that detected the edges:
---![alt text][image1]
+--![canny_edges_image][image2]
 Afterwards, I masked the image focusing only on the lines that I cared about.
---![alt text][image1]
+--![masked_edges_image][image3]
 Afterwards, I applied `hough_lines` transform which returned the lines(x,y pairs of end points of the lines) in the image.
 Then, in the `draw_lines()` function, I classified the lines into `right_lines` and `left_lines` using the lines' slopes by the simple logic below,
 
