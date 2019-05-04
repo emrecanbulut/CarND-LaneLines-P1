@@ -23,12 +23,15 @@ The goals / steps of this project are the following:
 
 My pipeline consisted of 5 steps. 
 First, I converted the images to grayscale and later applied Gaussian smoothing which resulted in:
+
 ![grayscale_image][image1]
 
 Then, I applied the `canny` function that detected the edges:
+
 ![canny_edges_image][image2]
 
 Afterwards, I masked the image focusing only on the lines that I cared about.
+
 ![masked_edges_image][image3]
 
 Afterwards, I applied `hough_lines` transform which returned the lines(x,y pairs of end points of the lines) in the image.
